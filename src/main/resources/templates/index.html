@@ -7,10 +7,12 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- <link rel="stylesheet" href="main.css"> -->
 </head>
 <body>
-    <div th:insert="~{components/header}"></div>
-    <div th:insert="~{welcome}"></div>
+    <div class="flex flex-col h-screen">
+        <div th:insert="~{components/header}" class="h-10vh"></div>
+        <div th:insert="~{welcome}" class="flex-grow flex items-center justify-center"></div>
+        <div th:insert="~{components/footer}" class="h-20vh ml-2 items-center p-2.5"></div>
+    </div>
 </body>
 </html>
